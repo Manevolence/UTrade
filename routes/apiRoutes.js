@@ -1,3 +1,10 @@
+// Routes that work 
+
+// View all products
+// View all products by category
+// View all products by featured
+// Post product
+
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
@@ -24,7 +31,7 @@ module.exports = function(app) {
   app.get("/api/product/category/:category", function(req, res) {
     db.Product.findAll({
       where: {
-        category: req.params.category
+        product_category: req.params.category
       }
     })
       .then(function(dbProduct) {
@@ -32,10 +39,10 @@ module.exports = function(app) {
       });
   });
   // get route for featured products  
-  app.get("/api/product/featured/:featured", function(req, res) {
+  app.get("/api/product/featured", function(req, res) {
     db.Product.findAll({
       where: {
-        category: req.params.featured
+        featured_product: 1
       }
     })
       .then(function(dbProduct) {
@@ -46,7 +53,7 @@ module.exports = function(app) {
   app.get("/api/product/search/:searchterm", function(req, res) {
     db.Product.findAll({
       where: {
-        category: req.params.searchterm
+        product_name: req.params.searchterm
       }
     })
       .then(function(dbProduct) {
@@ -78,19 +85,19 @@ module.exports = function(app) {
       });
   });
   // POST route for saving a new product
-  app.post("/api/product", function(req, res) {
+  app.post("/api/productpost", function(req, res) {
     console.log(req.body);
     db.Product.create({
-      product_name: req.body.product_name_input,
-      product_category: req.body.product_category_input,
-      product_condition: req.body.product_condition_input,
-      image_url: req.body.image_url_input,
-      product_featuerd: req.body.featured_input,
-      product_description: req.body.product_description_input,
-      product_price: req.body.product_price_input,
-      product_location: req.body.product_location_input,
-      featured_product: req.body.featured_product_input,
-      user_id: req.body.user_id_input
+      product_name: req.body.product_name,
+      product_category: req.body.product_category,
+      product_condition: req.body,
+      image_url: req.body,
+      product_featured: req.body,
+      product_description: req.body.product_description,
+      product_price: req.body.product_price,
+      product_location: req.body,
+      featured_product: req.body,
+      user_id: req.body
     })
       .then(function(dbProduct) {
         res.json(dbProduct);
