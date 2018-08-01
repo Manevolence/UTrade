@@ -10,7 +10,7 @@ body {
 /* Index */
 
 .herocontainer {
-  height: 75vh;
+  height: 150vh;
   border: none;
   width: 100%;
   background: rgba(110,230,144,1) !important;
@@ -80,6 +80,14 @@ button:active {
   margin-top: 40px;
 }
 
+#form {
+  font-family: 'PT Sans', sans-serif;
+  color:  #fff;
+  font-size: 25px;
+  margin: 0 auto; 
+  width:250px;
+ 
+}
 
 
 
