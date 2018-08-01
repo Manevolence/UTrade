@@ -35,7 +35,9 @@ $(document).ready(function() {
       image_url: product_imageURL_Input.val().trim(),
       product_description: product_description_Input.val().trim(),
       product_price: product_price_Input.val(),
-      product_location: product_location.Input.val().trim() 
+      product_location: product_location_Input.val().trim(),
+      featured_product: featured_product_Input.val().trim(),
+      user_id: user_id_input.val().trim() 
     };
 
     console.log(newProduct);

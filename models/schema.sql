@@ -2,7 +2,13 @@ DROP DATABASE IF EXISTS `utrade_db`;
 CREATE DATABASE `utrade_db`;
 USE `utrade_db`;
 
-
+CREATE TABLE `user` (
+ `id` int(11) auto_increment not null,
+ `user_name` VARCHAR(12),
+ `user_password` varchar(30),
+ `email` varchar(255),
+   primary Key (`id`)
+);
 /* Create a profile table for all users */
 CREATE TABLE `profile` (
 	`id` Int( 11 ) AUTO_INCREMENT NOT NULL,
@@ -29,7 +35,7 @@ CREATE TABLE `products` (
     `product_condition` varchar(6) not null,  
     `image_url` VARCHAR(150),
     `product_description` LONGTEXT,
-    `product_price` float,
+    `product_price` int(11),
     `product_location` varchar (255),
     `featured_product` boolean,
     `user_id` int,
