@@ -9,7 +9,7 @@ CREATE TABLE `profile` (
 	`firstname` VARCHAR( 255)  not NULL,
 	`lastname` VARCHAR( 255 )  not NULL,
 	`email` VARCHAR( 255 )  not NULL,
-	`university` VARCHAR(255)  NULL,
+	`location` VARCHAR(255)  NULL,
     `phone_number` varchar(10), 	
 	/* Set ID as primary key */
 	PRIMARY KEY ( `id` )
@@ -27,10 +27,12 @@ CREATE TABLE `products` (
 	`product_name` VARCHAR( 255)  NULL,
     `product_category` VARCHAR (30) NOT NULL,
     `product_condition` varchar(6) not null,  
-    'image_url' VARCHAR(150),
+    `image_url` VARCHAR(150),
     `product_description` LONGTEXT,
     `product_price` float,
     `product_location` varchar (255),
+    `featured_product` boolean,
+    `user_id` int,
 	/* Set ID as primary key */
 	PRIMARY KEY ( `id` )
 );
@@ -40,14 +42,26 @@ Create table `Student_Housing` (
     `location` VARCHAR(200),
     `monthly_rent` float,
     primary key(`id`)
-);
+)
 use utrade_db;
 
-insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location)
-   values('Misc','Cooking book', 'Misecllaneous','Good','https://i.imgur.com//kcVCHoj.jpg','This is a good cookbook',10.40,'Somerset, NJ');
-insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location)
-   values('Appl','Firdge', 'Applicance','Good','https://i.imgur.com//kcVCHoj.jpg','Fridge with freezer',110.30,'Princeton, NJ');
-insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location)
-   values('Text','Textbook', 'School Textbooks','Average','https://i.imgur.com//kcVCHoj.jpg','This is a Philosphy textbook',20.40,'Somerset, NJ');
-insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location)
-   values('Misc','Skateboard', 'Misecllaneous','Good','https://i.imgur.com//kcVCHoj.jpg','This is a new skateboard',20.40,'New brunswick, NJ');
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Misc','Cooking book', 'Misecllaneous','Good','https://i.imgur.com//kcVCHoj.jpg','This is a good cookbook',10.40,'Somerset, NJ',0);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Appl','Fridge', 'Applicance','Good','https://i.imgur.com//kcVCHoj.jpg','Fridge with freezer',110.30,'Princeton, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Text','Textbook', 'School Textbooks','Average','https://i.imgur.com//kcVCHoj.jpg','This is a Philosphy textbook',20.40,'Somerset, NJ',0);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Misc','Skateboard', 'Misecllaneous','Good','https://i.imgur.com//kcVCHoj.jpg','This is a new skateboard',20.40,'New brunswick, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Misc','Bong', 'Misecllaneous','Great','https:\/\/i.imgur.com\/il4oIGy.jpg','This is a great product',20.40,'New brunswick, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Text','Textbook', 'School Textbook - accounting','Average','https://i.imgur.com//kcVCHoj.jpg','This is a Philosphy textbook',20.40,'Somerset, NJ',0);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Elect','Electronics', 'Apple ipad','Good','https://i.imgur.com//kcVCHoj.jpg','This is a Apple Ipad 4th generation',300.00,'Somerset, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Elect','Electronics', 'Apple macbook pro','Good','https:\/\/i.imgur.com\/hSoiFm1.jpg','This is an apple laptop brand new',2100.00,'Somerset, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Furn','Furniture', 'Office Chair','Good','https:\/\/i.imgur.com\/DNFWSdr.jpg','This is a new office chair',90.00,'Somerset, NJ',1);
+insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
+   values('Furn','Furniture', 'Bed','Good','https:\/\/i.imgur.com\/DNFWSdr.jpg','This is a bed frame and mattress',70.00,'Princeton, NJ',1);
