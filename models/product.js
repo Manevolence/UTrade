@@ -28,6 +28,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+<<<<<<< HEAD
      image_url: {
        type: DataTypes.STRING,
        allowNull: true,
@@ -35,6 +36,23 @@ module.exports = function(sequelize, DataTypes) {
        len: [1]
      }
     },
+=======
+    product_condition: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    image_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+>>>>>>> 60ba7c3281fec2ec903ab72a8c49a90c9adbf7c2
   });
   return Product;
 };

@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
@@ -20,7 +21,11 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.get("/home", function(req, res) {
+  app.get("/postform", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/posctform.html"));
+  });
+
+  app.get("/category", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 

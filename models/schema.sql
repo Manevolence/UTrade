@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DROP DATABASE IF EXISTS `utrade_db`;
 CREATE DATABASE `utrade_db`;
 USE `utrade_db`;
@@ -71,3 +72,5 @@ insert into products(category_id,product_name,product_category,product_condition
    values('Furn','Furniture', 'Office Chair','Good','https:\/\/i.imgur.com\/DNFWSdr.jpg','This is a new office chair',90.00,'Somerset, NJ',1);
 insert into products(category_id,product_name,product_category,product_condition,image_url,product_description,product_price,product_location,featured_product)
    values('Furn','Furniture', 'Bed','Good','https:\/\/i.imgur.com\/DNFWSdr.jpg','This is a bed frame and mattress',70.00,'Princeton, NJ',1);
+=======
+>>>>>>> 60ba7c3281fec2ec903ab72a8c49a90c9adbf7c2
