@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
@@ -20,8 +21,12 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+  app.get("/postform", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/postform.html"));
+  });
+
+  app.get("/category/electronics", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/test.html"));
   });
 
   // Render 404 page for any unmatched routes

@@ -20,6 +20,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the products
+  // WORKING
   app.get("/api/product/", function(req, res) {
     db.Product.findAll({})
       .then(function(dbProduct) {
@@ -28,6 +29,7 @@ module.exports = function(app) {
   });
 
   // Get route for returning products of a specific category
+  // WORKING
   app.get("/api/product/category/:category", function(req, res) {
     db.Product.findAll({
       where: {
@@ -39,6 +41,7 @@ module.exports = function(app) {
       });
   });
   // get route for featured products  
+  // WORKING
   app.get("/api/product/featured", function(req, res) {
     db.Product.findAll({
       where: {
@@ -50,6 +53,7 @@ module.exports = function(app) {
       });
   });
   // get route for open searched products  
+  // WORKING
   app.get("/api/product/search/:searchterm", function(req, res) {
     db.Product.findAll({
       where: {
@@ -62,6 +66,7 @@ module.exports = function(app) {
   });
 
   // Get route for retrieving a single product
+  // WORKING
     app.get("/api/product/:id", function(req, res) {
     db.Product.findOne({
       where: {
@@ -73,7 +78,7 @@ module.exports = function(app) {
       });
   });
 
-  // Get route for retrieving all products for author
+  // Get route for retrieving all products by username
   app.get("/api/product/:author", function(req, res) {
     db.Product.findAll({
       where: {
@@ -85,56 +90,55 @@ module.exports = function(app) {
       });
   });
   // POST route for saving a new product
+  // WORKING
   app.post("/api/productpost", function(req, res) {
     console.log(req.body);
     db.Product.create({
       product_name: req.body.product_name,
       product_category: req.body.product_category,
-      product_condition: req.body,
-      image_url: req.body,
-      product_featured: req.body,
+      product_condition: req.body.product_condition,
+      image_url: req.body.image_url,
       product_description: req.body.product_description,
       product_price: req.body.product_price,
-      product_location: req.body,
-      featured_product: req.body,
-      user_id: req.body
+      product_location: req.body.product_location,
+      user_id: req.body.user_id
     })
       .then(function(dbProduct) {
         res.json(dbProduct);
       });
   });
 
-  // DELETE route for deleting products
-  app.delete("/api/product/:id", function(req, res) {
-    db.Post.destroy({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function(dbProducts) {
-        res.json(dbProducts);
-      });
-  });
+  // // DELETE route for deleting products
+  // app.delete("/api/product/:id", function(req, res) {
+  //   db.Post.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function(dbProducts) {
+  //       res.json(dbProducts);
+  //     });
+  // });
 
-  // PUT route for updating products
-  app.put("/api/product", function(req, res) {
-    db.product.update(req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(dbProduct) {
-        res.json(dbProduct);
-      });
-  });
-  // GET route for getting all of the profiles
-  app.get("/api/profile/", function(req, res) {
-    db.Product.findAll({})
-      .then(function(dbProduct) {
-        res.json(dbProduct);
-      });
-  });
+  // // PUT route for updating products
+  // app.put("/api/product", function(req, res) {
+  //   db.product.update(req.body,
+  //     {
+  //       where: {
+  //         id: req.body.id
+  //       }
+  //     })
+  //     .then(function(dbProduct) {
+  //       res.json(dbProduct);
+  //     });
+  // });
+  // // GET route for getting all of the profiles
+  // app.get("/api/profile/", function(req, res) {
+  //   db.Product.findAll({})
+  //     .then(function(dbProduct) {
+  //       res.json(dbProduct);
+  //     });
+  // });
 
   // Get route for returning profiles of a specific category
   app.get("/api/profile/category/:category", function(req, res) {
@@ -165,7 +169,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Profile.create({      
       firstname: req.body.firstname_input,
-      lastname: req.body.lsatname_input,
+      lastname: req.body.lastname_input,
       email: req.body.email,
       phone_number: req.body.phone_number_input,
       location: req.body.location_input
