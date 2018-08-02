@@ -103,6 +103,17 @@ nav {
   font-weight: 700;
 }
 
+#productimagecontainer {
+  height: 300px;
+  width: 200px;
+}
+
+#product_image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
