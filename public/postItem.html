@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-   <!-- <link rel="stylesheet" href="./styles/styles.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./styles/styles.css"> -->
     <link rel="stylesheet" href="./styles/newstyles.css">
-    
-   
+
+
 </head>
 
 <body>
@@ -35,7 +36,7 @@
     </nav>
     <div class="sidenav">
         <div class="sidenavcontainer">
-            <a href="#about">Home</a> 
+            <a href="#about">Home</a>
             <a href="#services">Electronics</a>
             <a href="#clients">Furniture/Appliances</a>
             <a href="#services">Books</a>
@@ -48,37 +49,53 @@
 
     <div class="container main">
         <div class="row">
-            
+
             <div class="col-md-12 info_container">
                 <h1>Post an Item</h1>
-                
-                
+
+
             </div>
         </div>
-        <div class = "row">
-            <div class ="col-md">
-                    <div class="form">
-                                
-                            <form class="login-form">
-                            <select placeholder= "Choose Category">
-                                <option value="">Select your Category</option>
-                                <option value="volvo">Home</option>
-                                <option value="saab">Electronics</option>
-                                <option value="fiat">Furniture/Appliances</option>
-                                <option value="audi">Books</option>
-                                <option value="audi">Housing</option>
-                                <option value="audi">Jobs</option>
-                                <option value="audi">Clubs/Events</option>
+        <div class="row">
+            <div class="col-md">
+                <div class="form">
+
+                    <form id="productForm" class="login-form">
+                        <div class="form-group">
+                            <select name="productcategory_input" id="productcategory_input" placeholder="Choose Category"></select>
+                            <option value="">Select your Category</option>
+                            <option value="volvo">Home</option>
+                            <option value="saab">Electronics</option>
+                            <option value="fiat">Furniture/Appliances</option>
+                            <option value="audi">Books</option>
+                            <option value="audi">Housing</option>
+                            <option value="audi">Jobs</option>
+                            <option value="audi">Clubs/Events</option>
                             </select>
-                            <textarea placeholder="Describe Item"></textarea>
-                            <input type="category" placeholder="Name"/>
-                            <input type="password" placeholder="Price"/>
-                            <input type="password" placeholder="Condition"/>
-                            <input type="password" placeholder="Location"/>
-                            <button>submit</button>
-                              
-                            </form>
-                          </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="productdescription_input" type="text" placeholder="Describe Item"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input id="productcategory_input" type="category" type="text" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <input id="productprice_input" type="text" placeholder="Price" />
+                        </div>
+                        <div class="form-group">
+                            <input id="product_condition" type="text" placeholder="Condition" />
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+
+
+
+
+                        <input id="product_location" type="text" placeholder="Location" />
+                        <button id="product_submit">submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -91,6 +108,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
+    <script src="./js/productpost.js"></script>
 </body>
 
 </html>

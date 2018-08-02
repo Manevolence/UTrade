@@ -22,12 +22,18 @@ module.exports = function(app) {
   // });
 
   app.get("/postform", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/posctform.html"));
+    res.sendFile(path.join(__dirname, "../public/postitem.html"));
   });
 
   app.get("/category", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
