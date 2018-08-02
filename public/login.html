@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -24,27 +25,33 @@
         </div>
         <div class="row">
             <div class="col-md-6 herotext">
-                <h1>Everything you need for college, all in one place</h1>
-                <p>Whether you need to buy a textbook, some furniture for your new apartment or dorm, or anything else, UTrade
-                    helps you buy and sell to the college students around you.
-                </p>
+               
+                
             
                 <br><br><br>
             
-                <form id = "form">
-                    Username:<br>
-                    <input type="text" name="firstname"><br>
-                    Password:<br>
-                    <input type="text" name="lastname"> <br>
-                    
-                  </form>
-            </div>
-            <div>
+                <div class="login-page">
+                        <div class="form">
+                          <form class="register-form">
+                            <input type="text" placeholder="name"/>
+                            <input type="password" placeholder="password"/>
+                            <input type="text" placeholder="email address"/>
+                            <button>create</button>
+                            <p class="message">Already registered? <a href="#">Sign In</a></p>
+                          </form>
+                          <form class="login-form">
+                            <input type="text" placeholder="username"/>
+                            <input type="password" placeholder="password"/>
+                            <button>login</button>
+                            <p class="message">Not registered? <a href="#">Create an account</a></p>
+                          </form>
+                        </div>
+                      </div>
+                </div>
                 
             </div>
-            <div class="col-md-6">
-                <img src="./images/collegebuilding.png" alt="">
-            </div>
+           
+            
         </div>
     </div>
 
