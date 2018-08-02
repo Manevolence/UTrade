@@ -1,55 +1,41 @@
-$(document).ready(function() {
-    
-})
+$(document).ready(function(){
 
-function createNewRow(product) {
-    var image_url = product.image_url;
-    var newProductCol = $("<div>");
-    newProductCol.addClass("col-md-4");
-    var newProductCard = $("<div>");
-    newProductCard.addClass("card");
-    var newPostCardimage= $("<div>")
-    newPostCardimage.addclass("productimagecontainer")
-    var newImage = $("<img id=product_image");
-    newImage.addClass("");
-    newImage.text("alt=`card image Cap`");
-    newImage.text("src=");
-    newImage.text(image_url);     
-    newProductbody = $("<div>");
-    newProductbody.addclass("card-body")
-    newProductbody.text("<img src=");
-    Productbody.text("./images/electronics_btn.png");
-    Productbody.text("alt="); 
-    var Productbodyp = $("<p>");
-    Productbodyp.text("id=`product_name`>");  
-    Productbodyp.text(product.product_name);
-    var Productbodyp2 = $("<p>");
-    Productbodyp2.text("id=`product_location`>");
-    Productbodyp2.text(product.product.location); 
-    
-    // Productbody.text(Product_location);
-     
-    newProductCol.append(newProductCol);
-    newProductCol.append(newProductCard);
-    newProductCol.append(newPostCardimage);
-    newProductCol.append(newImage);
-    newProductCol.append(newProductbody);
-    newProductCol.append(Productbody);
-    newProductCol.append(Productbody2);
-    // var newProductCardBody = $("<div>");
-    // newProductCardBody.addClass("card-body");
-    // var newPostBody = $("<p>");
-    // newPostTitle.text(post.title + " ");
-    // newPostBody.text(post.body);
-    // newPostDate.text(formattedDate);
-    // newPostTitle.append(newPostDate);
-    // newPostCardHeading.append(deleteBtn);
-    // newPostCardHeading.append(editBtn);
-    // newPostCardHeading.append(newPostTitle);
-    // newPostCardHeading.append(newPostAuthor);
-    // newPostCardBody.append(newPostBody);
-    // newPostCard.append(newPostCardHeading);
-    // newPostCard.append(newPostCardBody);
-    // newPostCard.data("post", post);
-    return newProductCol;
+    $.get("api/product", function(data){
+    console.log(data);
+    displayFeatured(data);
+  })
+
+  
+  function displayFeatured(data){
+
+    data.forEach(function(dataObj){
+      var newDiv = $("<div class='col-md-4'>");
+      var newCard = $("<div class ='card'>");
+      var productImageCont = $('<div class="productimagecontainer">')
+      var newCardBody = $("<div class='card-body'>");
+      var itemName = $("<p id='product_name'>");
+      var itemPrice = $("<p id='product_location'>");
+      var featuredBadge = $('<img src="./images/featured_btn.png">');
+      var productImage = $("<img id='product_image' class='' src=https://picsum.photos/1400/1400?random>")
+      var productImage = $("<img id='product_image' class='' src=" + dataObj.image_url + ">")
+      
+
+      newCardBody.append(featuredBadge, itemName, itemPrice)
+
+      productImageCont.append(productImage)
+
+      newCard.append(productImageCont,newCardBody)
+      
+      newDiv.append(newCard)
+
+      itemName.append(dataObj.product_name);
+      itemPrice.append(dataObj.product_price);
+
+      $(".product_container").append(newDiv);
+
+      // $("productimagecontainer").append(productImage);
+
+    });
   }
+
+})
