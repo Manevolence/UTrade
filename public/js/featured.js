@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get("api/product/featured", function(data){
+    $.get("api/product/", function(data){
     console.log(data);
     displayFeatured(data);
   })

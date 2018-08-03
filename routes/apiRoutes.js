@@ -54,7 +54,7 @@ module.exports = function (app) {
   app.get("/api/product/category/electronics", function(req, res) {
     db.Product.findAll({
       where: {
-        product_category: 'Electronics'
+        product_category: Electronics
       }
     })
       .then(function(dbProduct) {
