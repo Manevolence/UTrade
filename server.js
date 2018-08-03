@@ -45,6 +45,21 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+// var connection;
+// if(process.env.JAWSDB_URL) {
+//   //Heroku deployment
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   //local host
+//     connection = mysql.createConnection({
+//         root: 3000,
+//         host: "localhost",
+//         user: "root",
+//         password: "root",
+//         database: "utrade_db",
+//     });
+// };
+
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
