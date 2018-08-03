@@ -20,12 +20,12 @@ $(document).ready(function () {
     $(productForm).on("submit", function handleFormSubmit(event) {
         event.preventDefault();
         var newProduct = {
-            product_name: productName.val().trim(),
+            product_name: productName.val(),
             product_category: productCategory.val().trim(),
             product_price: productPrice.val().trim(),
             product_description: productDescription.val().trim(),
-            product_condition: productCondition.val().trim()
-            // image_url: productImage.val().trim
+            product_condition: productCondition.val().trim(),
+            image_url: productImage.val().trim()
         }
 
         console.log(newProduct);

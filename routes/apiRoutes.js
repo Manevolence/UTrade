@@ -1,18 +1,3 @@
-// Routes that work 
-
-// View all products
-// View all products by category
-// View all products by featured
-// Post product
-
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
-
-// Requiring our Todo model
 var db = require("../models");
 
 // Routes
@@ -40,6 +25,62 @@ module.exports = function(app) {
         res.json(dbProduct);
       });
   });
+
+  app.get("/api/product/category/electronics", function(req, res) {
+    db.Product.findAll({
+      where: {
+        product_category: Electronics
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
+  app.get("/api/product/category/furniture", function(req, res) {
+    db.Product.findAll({
+      where: {
+        product_category: Furniture
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
+  app.get("/api/product/category/books", function(req, res) {
+    db.Product.findAll({
+      where: {
+        product_category: Books
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
+  app.get("/api/product/category/housing", function(req, res) {
+    db.Product.findAll({
+      where: {
+        product_category: Housing
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
+  app.get("/api/product/category/clothing", function(req, res) {
+    db.Product.findAll({
+      where: {
+        product_category: Clothing
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
   // get route for featured products  
   // WORKING
   app.get("/api/product/featured", function(req, res) {
@@ -68,6 +109,17 @@ module.exports = function(app) {
   // Get route for retrieving a single product
   // WORKING
     app.get("/api/product/:id", function(req, res) {
+    db.Product.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbProduct) {
+        res.json(dbProduct);
+      });
+  });
+
+    app.get("/books/:id", function(req, res) {
     db.Product.findOne({
       where: {
         id: req.params.id
@@ -107,38 +159,6 @@ module.exports = function(app) {
         res.json(dbProduct);
       });
   });
-
-  // // DELETE route for deleting products
-  // app.delete("/api/product/:id", function(req, res) {
-  //   db.Post.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   })
-  //     .then(function(dbProducts) {
-  //       res.json(dbProducts);
-  //     });
-  // });
-
-  // // PUT route for updating products
-  // app.put("/api/product", function(req, res) {
-  //   db.product.update(req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     })
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
-  //     });
-  // });
-  // // GET route for getting all of the profiles
-  // app.get("/api/profile/", function(req, res) {
-  //   db.Product.findAll({})
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
-  //     });
-  // });
 
   // Get route for returning profiles of a specific category
   app.get("/api/profile/category/:category", function(req, res) {

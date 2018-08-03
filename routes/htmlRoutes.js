@@ -2,34 +2,40 @@ var db = require("../models");
 var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
-  // app.get("/", function(req, res) {
-  //   db.Product.findAll({}).then(function(dbExamples) {
-  //     res.render("./public", {
-  //       msg: "Welcome!",
-  //       examples: dbExamples
-  //     });
-  //   });
-  // });
-
-  // // Load example page and pass in an example by id
-  // app.get("/example/:id", function(req, res) {
-  //   db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.render("example", {
-  //       example: dbExample
-  //     });
-  //   });
-  // });
 
   app.get("/postform", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/postitem.html"));
   });
 
-  app.get("/category", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+  app.get("/featured", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/featured.html"));
+  });
+
+  app.get("/electronics", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/electronics.html"));
+  });
+
+  app.get("/furniture", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/furniture.html"));
+  });
+
+  app.get("/books", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/books.html"));
+  });
+
+  app.get("/housing", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/housing.html"));
+  });
+
+  app.get("/clothing", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/clothing.html"));
   });
 
   app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  app.get("/11", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 

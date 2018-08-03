@@ -29,13 +29,15 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <img src="http://via.placeholder.com/48x48" alt="" id="profile_image">
+                    <a href="/postform">
+                        <img src="./images/post_btn.png" alt="" id="profile_image"></a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="sidenav">
         <div class="sidenavcontainer">
+
             <a href="#about">Home</a>
             <a href="#services">Electronics</a>
             <a href="#clients">Furniture/Appliances</a>
@@ -62,22 +64,22 @@
 
                     <form id="productForm" class="login-form">
                         <div class="form-group">
-                            <select name="productcategory_input" id="productcategory_input" placeholder="Choose Category"></select>
-                            <option value="">Select your Category</option>
-                            <option value="volvo">Home</option>
-                            <option value="saab">Electronics</option>
-                            <option value="fiat">Furniture/Appliances</option>
-                            <option value="audi">Books</option>
-                            <option value="audi">Housing</option>
-                            <option value="audi">Jobs</option>
-                            <option value="audi">Clubs/Events</option>
+                            <select name="productcategory_input" id="productcategory_input" placeholder="Choose Category">
+                                <option value="">Select your Category</option>
+                                <option value="Home">Home</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture/Appliances</option>
+                                <option value="Books">Books</option>
+                                <option value="Housing">Housing</option>
+                                <option value="Jobs">Jobs</option>
+                                <option value="Clubs">Clubs/Events</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <textarea id="productdescription_input" type="text" placeholder="Describe Item"></textarea>
                         </div>
                         <div class="form-group">
-                            <input id="productcategory_input" type="category" type="text" placeholder="Name" />
+                            <input id="productname_input" type="category" type="text" placeholder="Name" />
                         </div>
                         <div class="form-group">
                             <input id="productprice_input" type="text" placeholder="Price" />
@@ -86,7 +88,10 @@
                             <input id="product_condition" type="text" placeholder="Condition" />
                         </div>
                         <div class="form-group">
-
+                            <input id="product_condition" type="text" placeholder="Condition" />
+                        </div>
+                        <div class="form-group">
+                            <input id="productimage_url" type="text" placeholder="Image URL" />
                         </div>
 
 
@@ -102,7 +107,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>

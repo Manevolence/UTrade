@@ -37,14 +37,14 @@ nav {
   height: 650px;
   position: fixed;
   z-index: 1;
-  top: 120px;
+  top: 10px;
   left: 10px;
-  background: #fff;
+  background: #FCFCFC;
   overflow-x: hidden;
   padding: 20px 0;
-  -webkit-box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05);
+  /* -webkit-box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05);
   -moz-box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05);
-  box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05); */
 }
 
 .sidenav a {

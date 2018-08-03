@@ -1,6 +1,5 @@
 $(document).ready(function(){
-
-    $.get("api/product", function(data){
+    $.get("api/product/featured", function(data){
     console.log(data);
     displayFeatured(data);
   })
@@ -18,9 +17,10 @@ $(document).ready(function(){
       var featuredBadge = $('<img src="./images/featured_btn.png">');
       var productImage = $("<img id='product_image' class='' src=https://picsum.photos/1400/1400?random>")
       var productImage = $("<img id='product_image' class='' src=" + dataObj.image_url + ">")
+      var productID = $('<p id ="product_name"><a href=' + dataObj.id + '>' + dataObj.product_name + '</a></p>')
       
 
-      newCardBody.append(featuredBadge, itemName, itemPrice)
+      newCardBody.append(featuredBadge, productID, itemPrice)
 
       productImageCont.append(productImage)
 

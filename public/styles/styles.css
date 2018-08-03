@@ -11,6 +11,7 @@ body {
 
 .herocontainer {
   height: 175vh;
+  max-height: 1200px;
   border: none;
   width: 100%;
   background: rgba(110,230,144,1) !important;
