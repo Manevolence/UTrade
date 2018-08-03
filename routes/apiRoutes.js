@@ -14,10 +14,30 @@
 
 // Requiring our Todo model
 var db = require("../models");
+var passport = require("../auth/passport");
 
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+//Registering new users:
+
+  app.post("/signup", function(req, res){
+    db.User.create(req.body)
+    .then(function(newUser){
+      res.json(newUser);
+    });
+  });
+
+  //Login  new users:
+
+  app.post("/login", passport.authenticate("local"),
+    function(req, res){
+      console.log("USER: ", req.user);
+      res.json("You've logged in successfully");
+      //successRedirect: '/profile',
+      //failureRedirect: '/login'
+  });
 
   // GET route for getting all of the products
   // WORKING
