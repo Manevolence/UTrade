@@ -37,9 +37,9 @@ nav {
   height: 650px;
   position: fixed;
   z-index: 1;
-  top: 10px;
+  top: 20px;
   left: 10px;
-  background: #FCFCFC;
+  /* background: #fff; */
   overflow-x: hidden;
   padding: 20px 0;
   /* -webkit-box-shadow: 0px 0px 18px 11px rgba(0,0,0,0.05);
@@ -141,11 +141,26 @@ nav {
   font-size: 14px;
 }
 
+#signup_btn {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: lightskyblue;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
 .form button {
   font-family: 'PT Sans', sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #5F5F5F;
+  background: lightskyblue;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -174,7 +189,7 @@ nav {
 body {
   
   
-  font-family: 'PT Sans', sans-serif;;
+  font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
@@ -184,3 +199,47 @@ body {
   width: 250px;
 }
 
+
+
+#main-content{
+  background:rgb(100%, 100%, 100%);
+  min-height:40vh;
+}
+
+aside{
+  max-height:400px;
+}
+
+
+
+.input-group-text{
+  min-width:100px;
+}
+
+button {
+  background-color:lightskyblue;
+
+}
+
+#mssgbtn{
+ font-family: 'PT Sans', sans-serif;
+ font-size: 20px;
+ color: white;
+}
+
+#demobox {
+  background-color:  #FFFFFF ;
+  padding: 10px ;
+  width: 90%;
+  box-shadow:0px 0px 18px 11px  rgba(0,0,0,0.05);
+  
+}
+
+#profPic {
+  background-color: #F5F5F5;
+  padding:5px;
+  width: 50%;
+  border: 0.5px solid grey;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+  font-size: 10px;
+}

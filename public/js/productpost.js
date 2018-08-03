@@ -16,6 +16,7 @@ $(document).ready(function () {
     var productDescription = $("#productdescription_input");
     var productCondition = $("#product_condition")
     var productImage = $("#productimage_url");
+    var productLocation = $("#product_location");
 
     $(productForm).on("submit", function handleFormSubmit(event) {
         event.preventDefault();
@@ -25,7 +26,8 @@ $(document).ready(function () {
             product_price: productPrice.val().trim(),
             product_description: productDescription.val().trim(),
             product_condition: productCondition.val().trim(),
-            image_url: productImage.val().trim()
+            image_url: productImage.val().trim(),
+            // product_location: productLocation.val().trim()
         }
 
         console.log(newProduct);
@@ -38,5 +40,8 @@ function submitProduct(Product) {
     $.post("/api/productpost", Product, function() {
         // window.location.href = "/postform";
         console.log("hit");
+        $( '#productForm' ).each(function(){
+            this.reset();
+        });
     })
 }

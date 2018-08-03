@@ -29,23 +29,19 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="/postform">
-                        <img src="./images/post_btn.png" alt="" id="profile_image"></a>
+                    <img src="http://via.placeholder.com/48x48" alt="" id="profile_image">
                 </div>
             </div>
         </div>
     </nav>
     <div class="sidenav">
         <div class="sidenavcontainer">
-
-            <a href="#about">Home</a>
-            <a href="#services">Electronics</a>
-            <a href="#clients">Furniture/Appliances</a>
-            <a href="#services">Books</a>
-            <a href="#contact">Housing</a>
-            <a href="#contact">Jobs</a>
-            <a href="#contact">Clubs/Events</a>
-            <a href="#contact">Clothing/Apparel</a>
+            <a href="/featured">Home</a>
+            <a href="/electronics">Electronics</a>
+            <a href="/furniture">Furniture/Appliances</a>
+            <a href="/books">Books</a>
+            <a href="/housing">Housing</a>
+            <a href="/clothing">Clothing/Apparel</a>
         </div>
     </div>
 
@@ -59,24 +55,54 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col-md-6">
                 <div class="form">
-
-                    <form id="productForm" class="login-form">
+                    <form id="productForm">
                         <div class="form-group">
-                            <select name="productcategory_input" id="productcategory_input" placeholder="Choose Category">
-                                <option value="">Select your Category</option>
-                                <option value="Home">Home</option>
-                                <option value="Electronics">Electronics</option>
-                                <option value="Furniture">Furniture/Appliances</option>
-                                <option value="Books">Books</option>
-                                <option value="Housing">Housing</option>
-                                <option value="Jobs">Jobs</option>
-                                <option value="Clubs">Clubs/Events</option>
+                            <label for="productname_input">What are you selling?</label>
+                            <input type="text" class="form-control" id="productname_input" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="product_category">Product Category:</label>
+                            <select class="form-control" id="productcategory_input">
+                                <option>Electronics</option>
+                                <option>Furniture/Appliances</option>
+                                <option>Books</option>
+                                <option>Housing</option>
+                                <option>Clothing/Apparel</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="productdescription_input" type="text" placeholder="Describe Item"></textarea>
+                            <label for="product_condition">Product Condition:</label>
+                            <select class="form-control" id="product_condition">
+                                <option>New</option>
+                                <option>Used</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="productprice_input">Product Price</label>
+                            <input type="text" class="form-control" id="productprice_input" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="productdescription_input">Product Description</label>
+                            <input type="text" class="form-control" id="productdescription_input" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="image_url">Image URL</label>
+                            <input type="text" class="form-control" id="image_url" placeholder="">
+                        </div>
+                        <input type="file" class="form-control-file" id="productimage_url">
+                        <button id="product_submit" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                    </form>
+                    <!-- <form id="productForm" class="login-form">
+                        <div class="form-group">
+                            <select name="productcategory_input" id="productcategory_input" placeholder="Choose Category">
+                                <option value="">Select your Category</option>
+                                <option value="home">Home</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="furniture">Furniture/Appliances</option>
+                                <option value="books">Books</option>
+                                <option value="housing">Housing</option>
                         </div>
                         <div class="form-group">
                             <input id="productname_input" type="category" type="text" placeholder="Name" />
@@ -85,21 +111,35 @@
                             <input id="productprice_input" type="text" placeholder="Price" />
                         </div>
                         <div class="form-group">
-                            <input id="product_condition" type="text" placeholder="Condition" />
+                            <textarea id="productdescription_input" type="text" placeholder="Describe Item"></textarea>
                         </div>
                         <div class="form-group">
                             <input id="product_condition" type="text" placeholder="Condition" />
                         </div>
-                        <div class="form-group">
-                            <input id="productimage_url" type="text" placeholder="Image URL" />
-                        </div>
-
-
-
-
-                        <input id="product_location" type="text" placeholder="Location" />
-                        <button id="product_submit">submit</button>
-                    </form>
+                        <input id="image_url" type="text" placeholder="image url" />
+                        <form id="imgur">
+                            <input type="file" class="imgur" accept="image/*" data-max-size="5000" />
+                        </form>
+                        <button id="product_submit" type="submit">submit</button>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Post Item</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your item was posted successfully!
+                </div>
+                <div class="modal-footer">
+                    <input id="signup_btn" type="button" class="btn btn-info" value="View Item" onclick="location.href = '/product';" style="background:  #65D68A;">
                 </div>
             </div>
         </div>
@@ -114,6 +154,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
     <script src="./js/productpost.js"></script>
+    <script src="./js/imageupload.js"></script>
 </body>
 
 </html>

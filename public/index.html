@@ -19,7 +19,6 @@
         <div class="row navrow">
             <div class="col-md-12">
                 <img src="./images/utradelogowhite.png" alt="">
-                <p class="text-right">login</p>
             </div>
         </div>
         <div class="row">
@@ -43,10 +42,15 @@
                                     <input id="username_input" type="text" placeholder="Username" />
                                     <input id="password_input" type="password" placeholder="Password" />
                                     <input id="confirmpassword_input" type="password" placeholder="Confirm Password" />
-                                    <button id="signup_btn">Sign Up Now!</button>
-                                    <p class="message">Already have an account?
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                            SIGN UP
+                                    </button>
+                                    <input id="signup_btn" type="button" class="btn btn-info" value="LOG IN" onclick="location.href = '/login';" style="background:  #65D68A;margin-top: 40px;">
+                                    <!-- <button type="button" id="signup_btn">Sign Up Now!</button> -->
+                                    
+                                    <!-- <p class="message">Already have an account?
                                         <a href="/login">Login</a>
-                                    </p>
+                                    </p> -->
                                 </form>
                             </div>
                         </div>
@@ -65,7 +69,23 @@
 
     </div>
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    User Franklin created!
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->

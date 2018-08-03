@@ -35,8 +35,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  app.get("/11", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/profile.html"));
+  });
+
+  app.get("/product", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/product.html"));
   });
 
 

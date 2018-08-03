@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/newstyles.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-dark bg-primary">
+        <div class="navcontainer">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="#!">
+                        <img src="./images/utradelogonew.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="http://via.placeholder.com/48x48" alt="" id="profile_image">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="sidenav">
+        <div class="sidenavcontainer">
+            <a href="#about">Home</a>
+            <a href="#services">Electronics</a>
+            <a href="#clients">Furniture/Appliances</a>
+            <a href="#contact">Books</a>
+            <a href="#contact">Housing</a>
+            <a href="#contact">Clothing/Apparel</a>
+        </div>
+    </div>
+
+    <div class="container main">
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productname_input">What are you selling?</label>
+                <input type="text" class="form-control" id="productname_input" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="product_category">Product Category:</label>
+                <select class="form-control" id="productcategory_input">
+                    <option>Electronics</option>
+                    <option>Furniture/Appliances</option>
+                    <option>Books</option>
+                    <option>Housing</option>
+                    <option>Clothing/Apparel</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product_condition">Product Condition:</label>
+                <select class="form-control" id="product_condition">
+                    <option>New</option>
+                    <option>Used</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="productprice_input">Product Price</label>
+                <input type="text" class="form-control" id="productprice_input" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="productdescription_input">Product Description</label>
+                <input type="text" class="form-control" id="productdescription_input" placeholder="">
+            </div>
+            <input type="file" class="form-control-file" id="productimage_url">
+            <button id="product_submit" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="./js/productpost.js"></script>
+</body>
+
+</html>
