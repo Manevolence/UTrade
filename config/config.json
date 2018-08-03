@@ -1,5 +1,6 @@
 {
   "development": {
+    "use_env_variable": "JAWSDB_URL",
     "username": "o3yw64sj5t0ss7yo",
     "password": "cjly0j2evddisgi0",
     "database": "gbpvrttbwzys2xz8",
