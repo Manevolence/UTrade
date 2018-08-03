@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "utrade_db",
-    "host": "localhost",
+    "username": "o3yw64sj5t0ss7yo",
+    "password": "cjly0j2evddisgi0",
+    "database": "gbpvrttbwzys2xz8",
+    "host": "otmaa16c1i9nwrek.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "port": 8889
+    "port": 3306
   },
   "test": {
     "username": "root",
