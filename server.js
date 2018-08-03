@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
+var LocalStrategy = require('passport-local').Strategy;
 
 var db = require("./models");
 var passport = require("./auth/passport");
